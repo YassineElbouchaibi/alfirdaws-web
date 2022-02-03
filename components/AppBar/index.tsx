@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   AppBar,
   Box,
@@ -10,19 +10,18 @@ import {
   Toolbar,
   Typography,
   useTheme,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { capitalize } from '../../utility/capitalize';
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ['home', 'about us', 'fundraising', 'donate'];
 
 const ResponsiveAppBar = () => {
   const theme = useTheme();
-  const [anchorElNav, setAnchorElNav] = useState<HTMLButtonElement | null>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = useState<HTMLButtonElement | null>(null);
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Large mode Logo */}
@@ -31,23 +30,22 @@ const ResponsiveAppBar = () => {
             noWrap
             component="div"
             sx={{
+              color: 'primary.main',
               flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              fontWeight: "bold",
+              display: { xs: 'none', md: 'flex' },
             }}
           >
             Masjid Al Firdaws
           </Typography>
 
           {/* Large Mode Buttons */}
-          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 sx={{
-                  color: "text.primary",
-                  display: "block",
-                  fontWeight: "bold",
+                  color: 'primary.main',
+                  display: 'block',
                 }}
                 onClick={() => setAnchorElNav(null)}
               >
@@ -61,20 +59,31 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{
+              color: 'primary.main',
+              flexGrow: 1,
+              display: { xs: 'flex', md: 'none' },
+            }}
           >
             Masjid Al Firdaws
           </Typography>
 
           {/* Small Mode Dropdown buttons */}
-          <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 0,
+              display: { xs: 'flex', md: 'none' },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={(event) => setAnchorElNav(event.currentTarget)}
-              color="inherit"
+              sx={{
+                color: 'primary.main',
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -82,23 +91,25 @@ const ResponsiveAppBar = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={() => setAnchorElNav(null)}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={() => setAnchorElNav(null)}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" sx={{ color: 'primary.main' }}>
+                    {capitalize(page)}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>

@@ -1,21 +1,21 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 const lightTheme = createTheme({
   shape: { borderRadius: 10 },
-  typography: { fontFamily: "Source Sans Pro" },
+  typography: { fontFamily: 'Source Sans Pro' },
   components: {
     MuiAppBar: {
-      defaultProps: { color: "default" },
+      defaultProps: { color: 'default' },
       styleOverrides: {
-        colorInherit: { backgroundColor: "#689f38", color: "#fff" },
+        colorInherit: { backgroundColor: '#689f38', color: '#fff' },
       },
     },
   },
   mixins: {},
   palette: {
-    mode: "light",
-    primary: { main: "#449d44" },
-    secondary: { main: "#449d44" },
+    mode: 'light',
+    primary: { main: 'rgb(47, 109, 47)' },
+    secondary: { main: 'rgb(47, 109, 47)' },
   },
   spacing: 8,
 });
