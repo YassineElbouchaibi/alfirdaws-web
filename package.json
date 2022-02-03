@@ -33,10 +33,5 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "yarn eslint --cache --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged"
-    }
   }
 }
