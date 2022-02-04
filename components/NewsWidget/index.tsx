@@ -40,14 +40,14 @@ const NewsWidget = () => {
       {[...Array(5)].map((_, index) => (
         <>
           <Grid
-            key={index}
+            key={`news-entry-${index}`}
             item
             sx={{
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
               height: '20vh',
-              width: '75%',
+              width: '70%',
             }}
           >
             {/* Icon */}
@@ -65,7 +65,7 @@ const NewsWidget = () => {
               </Typography>
             </Stack>
           </Grid>
-          <Divider variant="middle" sx={{ color: 'primary.main', width: '75%' }} />
+          <Divider sx={{ color: 'primary.main', width: '70%' }} key={`news-entry-${index}-divider`} />
         </>
       ))}
     </Grid>
