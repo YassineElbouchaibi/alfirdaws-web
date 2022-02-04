@@ -14,7 +14,7 @@ const Home: NextPage<Props> = ({ bannerImageUrl, logoImageUrl }) => {
   return (
     <Grid container direction={'column'} rowSpacing={2.5}>
       <Grid item>
-        <BannerWidget />
+        <BannerWidget bannerImageUrl={bannerImageUrl} />
       </Grid>
       <Grid item>
         <NewsWidget />

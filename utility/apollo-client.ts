@@ -1,12 +1,8 @@
-import getConfig from 'next/config';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
-
-const {
-  publicRuntimeConfig: { cmsUri },
-} = getConfig();
+import getAbsoluteCmsUrl from './getAbsoluteCmsUrl';
 
 const client = new ApolloClient({
-  uri: `${cmsUri}/graphql`,
+  uri: getAbsoluteCmsUrl('/graphql'),
   headers: {
     normalize: 'true',
   },

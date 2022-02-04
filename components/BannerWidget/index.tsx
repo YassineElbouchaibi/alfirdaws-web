@@ -1,6 +1,11 @@
 import { Grid, Typography, Stack, Button } from '@mui/material';
+import getAbsoluteCmsUrl from '../../utility/getAbsoluteCmsUrl';
 
-const BannerWidget = () => {
+interface Props {
+  bannerImageUrl: string;
+}
+
+const BannerWidget = ({ bannerImageUrl }: Props) => {
   return (
     <Grid
       container
@@ -9,7 +14,7 @@ const BannerWidget = () => {
       alignItems={'center'}
       sx={{
         height: '75vh',
-        backgroundImage: `url(${'/banner.jpg'})`,
+        backgroundImage: `url(${getAbsoluteCmsUrl(bannerImageUrl)})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 37%',
         width: '100vw',
