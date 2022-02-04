@@ -5,7 +5,12 @@ import NewsWidget from '../../components/NewsWidget';
 import { GET_ASSETS_QUERY, GetAssetsQuery } from '../../operations/queries/Assets';
 import client from '../../utility/apollo-client';
 
-const Home: NextPage = () => {
+interface Props {
+  bannerImageUrl: string;
+  logoImageUrl: string;
+}
+
+const Home: NextPage<Props> = ({ bannerImageUrl, logoImageUrl }) => {
   return (
     <Grid container direction={'column'} rowSpacing={2.5}>
       <Grid item>
@@ -29,6 +34,10 @@ export async function getStaticProps() {
 
   const bannerImageUrl = data.asset?.banner?.url;
   const logoImageUrl = data.asset?.logo?.url;
+
+  if (bannerImageUrl == null || logoImageUrl == null) {
+    throw new Error('No image url');
+  }
 
   return {
     props: {

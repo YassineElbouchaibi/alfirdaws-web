@@ -7,6 +7,9 @@ const {
 
 const client = new ApolloClient({
   uri: `${cmsUri}/graphql`,
+  headers: {
+    normalize: 'true',
+  },
   cache: new InMemoryCache(),
 });
 

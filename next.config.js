@@ -5,7 +5,7 @@ const nextConfig = {
     domains: ['source.unsplash.com'],
   },
   publicRuntimeConfig: {
-    cmsUri: 'http://localhost:1338/',
+    cmsUri: 'http://localhost:1338',
   },
 };
 
