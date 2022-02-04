@@ -17,7 +17,7 @@ const BannerWidget = ({ bannerImageUrl }: Props) => {
         backgroundImage: `url(${getAbsoluteCmsUrl(bannerImageUrl)})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 37%',
-        width: '100vw',
+        width: '100%',
       }}
     >
       <Grid

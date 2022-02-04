@@ -11,7 +11,7 @@ const NewsWidget = () => {
       alignItems={'center'}
       spacing={0}
       sx={{
-        width: '100vw',
+        width: '100%',
       }}
     >
       <Grid
