@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['source.unsplash.com'],
   },
+  publicRuntimeConfig: {
+    cmsUri: 'http://localhost:1338/',
+  },
 };
 
 module.exports = nextConfig;
