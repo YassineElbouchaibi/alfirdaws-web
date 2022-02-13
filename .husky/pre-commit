@@ -7,3 +7,7 @@ set -e
 
 yarn lint-staged --shell
 yarn pretty-quick --staged
+
+
+# For more information, see:
+# https://github.com/typicode/husky/issues/912#issuecomment-939261395
