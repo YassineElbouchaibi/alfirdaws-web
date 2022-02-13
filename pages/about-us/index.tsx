@@ -10,7 +10,7 @@ interface Props {
   logoImageUrl: string;
 }
 
-const AboutUs: NextPage<Props> = ({ bannerImageUrl, logoImageUrl }) => {
+const AboutUs: NextPage<Props> = ({ bannerImageUrl }) => {
   return (
     <Box sx={{ position: 'relative' }}>
       <Box
@@ -37,10 +37,11 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl, logoImageUrl }) => {
                   sx={{
                     paddingTop: 4,
                     fontSize: 'h2.fontSize',
-                    color: 'secondary.contrastText',
+                    color: 'primary.dark',
                     alignSelf: 'center',
                   }}
                 >
+                  {/* TODO: Get from CMS */}
                   About Us
                 </Typography>
 
@@ -52,17 +53,19 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl, logoImageUrl }) => {
                     alignSelf: 'center',
                     fontSize: { xs: 'subtitle1.fontSize', md: 'h6.fontSize' },
                     lineHeight: '2.2em',
-                    color: 'secondary.contrastText',
+                    color: 'primary.dark',
                   }}
                 >
-                  Le centre culturel musulman de Terrebonne (Mosquée Al Firdaws) est une association à but non lucratif
-                  qui vise à rassembler et servir la communauté musulmane de la Ville de Terrebone et de la MRC des
-                  Moulins en assurant les services de prières et en proposant de nombreuses activités religieuses,
-                  éducatives et ludiques, dans un cadre fraternel et chaleureux.
+                  {/* TODO: Get from CMS */}
+                  The Muslim Cultural Center of Terrebonne (Al Firdaws Mosque) is a non-profit association which aims to
+                  bring together and serve the Muslim community of the City of Terrebonne and the MRC des Moulins by
+                  providing prayer services and offering many religious activities, educational and recreational
+                  activities, in a warm and fraternal environment.
                 </Typography>
 
                 <Box sx={{ width: '95%', paddingBottom: 10 }}>
                   <Grid container spacing={4}>
+                    {/* TODO: Get pictures from CMS */}
                     <Grid item xs={12} md={6}>
                       <Skeleton variant="rectangular" height={300} />
                     </Grid>

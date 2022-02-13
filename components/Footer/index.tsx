@@ -14,6 +14,7 @@ const Footer = () => {
           <Typography
             variant="subtitle1"
             align="center"
+            color="primary.dark"
           >{`Copyright ${new Date().getFullYear()} - Masjid Al-Firdaws. All rights reserved.`}</Typography>
         </Grid>
       </Grid>
