@@ -38,6 +38,7 @@ const BannerWidget = ({ bannerImageUrl }: Props) => {
             color: 'primary.main',
           }}
         >
+          {/* TODO: Get from CMS */}
           Masjid Al Firdaws
         </Typography>
       </Grid>
@@ -53,9 +54,13 @@ const BannerWidget = ({ bannerImageUrl }: Props) => {
       >
         <Stack spacing={2} direction="row">
           <Button variant="contained" disableElevation size="large">
+            {/* TODO: Localize */}
+            {/* TODO: Control is button enabled from CMS */}
             Donate
           </Button>
           <Button variant="contained" disableElevation size="large">
+            {/* TODO: Localize */}
+            {/* TODO: Control is button enabled from CMS */}
             Salah Time
           </Button>
         </Stack>

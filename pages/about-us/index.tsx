@@ -78,6 +78,7 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl }) => {
                     <Grid item xs={12} md={6}>
                       <Skeleton variant="rectangular" height={300} />
                     </Grid>
+                    {/* TODO: Add View More button that linsk to gallery page */}
                   </Grid>
                 </Box>
               </Stack>

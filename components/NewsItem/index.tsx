@@ -47,6 +47,7 @@ const NewsItem = ({ title, description, imageUrl, publishedAt }: Props) => {
       <Grid item xs>
         <Stack direction="column" justifyContent="flex-start" alignItems="flex-start" spacing={2} padding={2}>
           {/* Title */}
+          {/* TODO: Make Title clickable to read more */}
           <Typography sx={{ fontSize: 'h5.fontSize' }}>{title}</Typography>
 
           {/* Description */}
@@ -56,6 +57,8 @@ const NewsItem = ({ title, description, imageUrl, publishedAt }: Props) => {
           <Typography pt={1} sx={{ fontSize: 'body2.fontSize', alignSelf: 'flex-end' }}>
             {dateString}
           </Typography>
+
+          {/* TODO: Add Read More button */}
         </Stack>
       </Grid>
     </Grid>

@@ -10,12 +10,13 @@ const Footer = () => {
   return (
     <footer>
       <Grid container direction={'row'} py={2} px={4} sx={{ backgroundColor: 'secondary.main' }}>
+        {/* TODO: Add Contact Us Form */}
+        {/* TODO: Add Contact Info */}
         <Grid item xs={12}>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            color="primary.dark"
-          >{`Copyright ${new Date().getFullYear()} - Masjid Al-Firdaws. All rights reserved.`}</Typography>
+          <Typography variant="subtitle1" align="center" color="primary.dark">
+            {/* TODO: Localize */}
+            {`Copyright ${new Date().getFullYear()} - Masjid Al-Firdaws. All rights reserved.`}
+          </Typography>
         </Grid>
       </Grid>
     </footer>
