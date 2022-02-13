@@ -1,4 +1,5 @@
-import { Grid, Typography, Divider } from '@mui/material';
+import { Divider, Grid, Typography } from '@mui/material';
+
 import { GetHomePageDataQuery } from '../../operations/queries/HomePageData';
 import NewsItem from '../NewsItem';
 

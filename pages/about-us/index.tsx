@@ -1,5 +1,6 @@
 import { Box, Divider, Grid, Paper, Skeleton, Stack, Typography, useTheme } from '@mui/material';
 import type { NextPage } from 'next';
+
 import { GET_ABOUT_US_PAGE_DATA_QUERY, GetAboutUsPageDataQuery } from '../../operations/queries/AboutUsPageData';
 import client from '../../utility/apollo-client';
 import getAbsoluteCmsUrl from '../../utility/getAbsoluteCmsUrl';

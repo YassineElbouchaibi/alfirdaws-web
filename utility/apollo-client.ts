@@ -1,4 +1,5 @@
 import { ApolloClient, DefaultOptions, InMemoryCache } from '@apollo/client';
+
 import getAbsoluteCmsUrl from './getAbsoluteCmsUrl';
 
 const defaultOptions: DefaultOptions = {

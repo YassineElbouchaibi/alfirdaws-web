@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import { Grid, Stack, Typography, useTheme } from '@mui/material';
+import Image from 'next/image';
+
 import getAbsoluteCmsUrl from '../../utility/getAbsoluteCmsUrl';
 
 interface Props {

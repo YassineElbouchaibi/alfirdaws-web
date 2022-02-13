@@ -1,13 +1,14 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+
 import { CacheProvider } from '@emotion/react';
-import { ThemeProvider, CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import type { AppProps } from 'next/app';
+import React from 'react';
 
 import AppBar from '../components/AppBar';
-import createEmotionCache from '../utility/createEmotionCache';
-import lightTheme from '../styles/theme/lightTheme';
-import '../styles/globals.css';
 import Footer from '../components/Footer';
+import lightTheme from '../styles/theme/lightTheme';
+import createEmotionCache from '../utility/createEmotionCache';
 
 const clientSideEmotionCache = createEmotionCache();
 

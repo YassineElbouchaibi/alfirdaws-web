@@ -4,6 +4,7 @@ import { Grid, Typography } from '@mui/material';
 // TODO: Add a link to the contact us page
 // TODO: Add a link to the privacy policy page
 // TODO: Add a link to the terms of service page
+// TODO: Make text editable on the CMS
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
           <Typography
             variant="subtitle1"
             align="center"
-          >{`Copyright ${new Date().getFullYear()} - Mosquée Al-Firdaws. All rights reserved.`}</Typography>
+          >{`Copyright ${new Date().getFullYear()} - Masjid Al-Firdaws. All rights reserved.`}</Typography>
         </Grid>
       </Grid>
     </footer>

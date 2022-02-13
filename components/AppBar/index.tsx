@@ -1,19 +1,9 @@
-import { useState } from 'react';
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Menu,
-  MenuItem,
-  Toolbar,
-  Typography,
-  useTheme,
-} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { capitalize } from '../../utility/capitalize';
+import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
+
+import { capitalize } from '../../utility/capitalize';
 
 const pages = ['home', 'about us', 'fundraising', 'donate'];
 

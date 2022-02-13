@@ -1,4 +1,5 @@
-import { Grid, Typography, Stack, Button } from '@mui/material';
+import { Button, Grid, Stack, Typography } from '@mui/material';
+
 import getAbsoluteCmsUrl from '../../utility/getAbsoluteCmsUrl';
 
 interface Props {

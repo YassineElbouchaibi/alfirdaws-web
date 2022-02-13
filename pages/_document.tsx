@@ -1,7 +1,8 @@
-import * as React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import createEmotionServer from "@emotion/server/create-instance";
-import createEmotionCache from "../utility/createEmotionCache";
+import createEmotionServer from '@emotion/server/create-instance';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import * as React from 'react';
+
+import createEmotionCache from '../utility/createEmotionCache';
 
 export default class MyDocument extends Document {
   render() {
@@ -70,7 +71,7 @@ MyDocument.getInitialProps = async (ctx) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(" ")}`}
+      data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
@@ -80,9 +81,6 @@ MyDocument.getInitialProps = async (ctx) => {
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: [
-      ...React.Children.toArray(initialProps.styles),
-      ...emotionStyleTags,
-    ],
+    styles: [...React.Children.toArray(initialProps.styles), ...emotionStyleTags],
   };
 };

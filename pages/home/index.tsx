@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material';
 import type { NextPage } from 'next';
+
 import BannerWidget from '../../components/BannerWidget';
 import NewsWidget from '../../components/NewsWidget';
 import { GET_HOME_PAGE_DATA_QUERY, GetHomePageDataQuery } from '../../operations/queries/HomePageData';
@@ -11,7 +12,7 @@ interface Props {
   announcements: NonNullable<GetHomePageDataQuery['announcements']>;
 }
 
-const Home: NextPage<Props> = ({ bannerImageUrl, logoImageUrl, announcements }) => {
+const Home: NextPage<Props> = ({ bannerImageUrl, announcements }) => {
   return (
     <Grid container direction={'column'} rowSpacing={2.5}>
       <Grid item>
@@ -28,7 +29,7 @@ export async function getStaticProps() {
   const { data } = await client.query<GetHomePageDataQuery>({
     query: GET_HOME_PAGE_DATA_QUERY,
     variables: {
-      locale: 'en',
+      locale: 'en', // TODO: get locale from cookie
       pagination: {
         limit: 5,
       },
