@@ -1,8 +1,13 @@
-import Image from 'next/image';
-import { Grid, Typography, Stack, Button, Divider } from '@mui/material';
+import { Grid, Typography, Divider } from '@mui/material';
+import { GetHomePageDataQuery } from '../../operations/queries/HomePageData';
+import NewsItem from '../NewsItem';
+
+interface Props {
+  announcements: NonNullable<GetHomePageDataQuery['announcements']>;
+}
 
 // News Widget that lists the latest news from lorem ipsum
-const NewsWidget = () => {
+const NewsWidget = ({ announcements }: Props) => {
   return (
     <Grid
       container
@@ -10,10 +15,12 @@ const NewsWidget = () => {
       justifyContent={'flex-start'}
       alignItems={'center'}
       spacing={0}
+      pb={10}
       sx={{
         width: '100%',
       }}
     >
+      {/* Widget Title */}
       <Grid
         item
         sx={{
@@ -34,39 +41,27 @@ const NewsWidget = () => {
         </Typography>
       </Grid>
 
-      <Divider variant="middle" sx={{ color: 'primary.main', width: '75%' }} />
+      {/* Widget Divider */}
+      <Grid item sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Divider variant="middle" sx={{ color: 'primary.main', width: '75%' }} />
+      </Grid>
 
-      {/* Create 5 news entry and render them */}
-      {[...Array(5)].map((_, index) => (
-        <>
-          <Grid
-            key={`news-entry-${index}`}
-            item
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '20vh',
-              width: '70%',
-            }}
-          >
-            {/* Icon */}
-            <Image src={`https://source.unsplash.com/random?${index}`} alt="News" width={200} height={200} />
-
-            <Stack direction="column" justifyContent="flex-start" alignItems="flex-start" spacing={2} padding={2}>
-              {/* Title */}
-              <Typography sx={{ fontSize: 'h5.fontSize' }}>Title</Typography>
-
-              {/* Description */}
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-              </Typography>
-            </Stack>
-          </Grid>
-          <Divider sx={{ color: 'primary.main', width: '70%' }} key={`news-entry-${index}-divider`} />
-        </>
+      {/* Announcements */}
+      {announcements.map(({ title, description, icon, publishedAt }, idx) => (
+        <Grid
+          item
+          key={`${title}-${idx}`}
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <NewsItem title={title} description={description} imageUrl={icon?.url} publishedAt={publishedAt} />
+          {idx != announcements.length - 1 && <Divider sx={{ color: 'primary.main', width: '70%' }} />}
+        </Grid>
       ))}
     </Grid>
   );

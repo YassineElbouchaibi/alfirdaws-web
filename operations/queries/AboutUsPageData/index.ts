@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
-export const GET_ASSETS_QUERY = gql`
-  query GetAssetsQuery {
+export const GET_ABOUT_US_PAGE_DATA_QUERY = gql`
+  query GetAboutUsPageDataQuery {
     asset {
       data {
         attributes {
@@ -25,4 +25,4 @@ export const GET_ASSETS_QUERY = gql`
   }
 `;
 
-export * from './__generated__/GetAssetsQuery';
+export * from './__generated__/GetAboutUsPageDataQuery';

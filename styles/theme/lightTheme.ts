@@ -15,7 +15,7 @@ const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: { main: 'rgb(47, 109, 47)' },
-    secondary: { main: 'rgb(47, 109, 47)' },
+    secondary: { main: '#fff' },
   },
   spacing: 8,
 });

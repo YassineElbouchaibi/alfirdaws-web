@@ -7,6 +7,13 @@
 // START Enums and Input Objects
 //==============================================================
 
+export interface PaginationArg {
+  page?: number | null;
+  pageSize?: number | null;
+  start?: number | null;
+  limit?: number | null;
+}
+
 //==============================================================
 // END Enums and Input Objects
 //==============================================================

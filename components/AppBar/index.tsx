@@ -13,11 +13,12 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { capitalize } from '../../utility/capitalize';
+import { useRouter } from 'next/router';
 
 const pages = ['home', 'about us', 'fundraising', 'donate'];
 
 const ResponsiveAppBar = () => {
-  const theme = useTheme();
+  const router = useRouter();
   const [anchorElNav, setAnchorElNav] = useState<HTMLButtonElement | null>(null);
 
   return (
@@ -47,7 +48,10 @@ const ResponsiveAppBar = () => {
                   color: 'primary.main',
                   display: 'block',
                 }}
-                onClick={() => setAnchorElNav(null)}
+                onClick={() => {
+                  router.push(`/${page.replace(/\s/g, '-')}`);
+                  setAnchorElNav(null);
+                }}
               >
                 {page}
               </Button>
