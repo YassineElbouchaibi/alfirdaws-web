@@ -5,12 +5,6 @@ import { useState } from 'react';
 
 import { capitalize } from '../../utility/capitalize';
 
-// TODO: Add fundraising page
-// TODO: Add contact page
-// TODO: Add donate page
-
-// TODO: Convert Pages to objects so that we can have different locales via displayName
-
 const pages = ['home', 'about us'];
 
 const ResponsiveAppBar = () => {
@@ -32,7 +26,6 @@ const ResponsiveAppBar = () => {
               display: { xs: 'none', md: 'flex' },
             }}
           >
-            {/* TODO: Get from CMS */}
             Masjid Al Firdaws
           </Typography>
 
@@ -66,7 +59,6 @@ const ResponsiveAppBar = () => {
               display: { xs: 'flex', md: 'none' },
             }}
           >
-            {/* TODO: Get from CMS */}
             Masjid Al Firdaws
           </Typography>
 

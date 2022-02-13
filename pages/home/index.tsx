@@ -29,7 +29,7 @@ export async function getStaticProps() {
   const { data } = await client.query<GetHomePageDataQuery>({
     query: GET_HOME_PAGE_DATA_QUERY,
     variables: {
-      locale: 'en', // TODO: get locale from cookie
+      locale: 'en',
       pagination: {
         limit: 5,
       },

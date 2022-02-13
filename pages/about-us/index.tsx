@@ -41,7 +41,6 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl }) => {
                     alignSelf: 'center',
                   }}
                 >
-                  {/* TODO: Get from CMS */}
                   About Us
                 </Typography>
 
@@ -56,7 +55,6 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl }) => {
                     color: 'primary.dark',
                   }}
                 >
-                  {/* TODO: Get from CMS */}
                   The Muslim Cultural Center of Terrebonne (Al Firdaws Mosque) is a non-profit association which aims to
                   bring together and serve the Muslim community of the City of Terrebonne and the MRC des Moulins by
                   providing prayer services and offering many religious activities, educational and recreational
@@ -65,7 +63,6 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl }) => {
 
                 <Box sx={{ width: '95%', paddingBottom: 10 }}>
                   <Grid container spacing={4}>
-                    {/* TODO: Get pictures from CMS */}
                     <Grid item xs={12} md={6}>
                       <Skeleton variant="rectangular" height={300} />
                     </Grid>
@@ -78,7 +75,6 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl }) => {
                     <Grid item xs={12} md={6}>
                       <Skeleton variant="rectangular" height={300} />
                     </Grid>
-                    {/* TODO: Add View More button that linsk to gallery page */}
                   </Grid>
                 </Box>
               </Stack>

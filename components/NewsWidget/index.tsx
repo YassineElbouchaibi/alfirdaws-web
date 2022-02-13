@@ -38,7 +38,6 @@ const NewsWidget = ({ announcements }: Props) => {
             color: 'primary.main',
           }}
         >
-          {/* TODO: Get from CMS */}
           Latest News
         </Typography>
       </Grid>
@@ -65,8 +64,6 @@ const NewsWidget = ({ announcements }: Props) => {
           {idx != announcements.length - 1 && <Divider sx={{ color: 'primary.main', width: '70%' }} />}
         </Grid>
       ))}
-
-      {/* TODO: Add view more button that links to list of annoucements */}
     </Grid>
   );
 };
