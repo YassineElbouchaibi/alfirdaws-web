@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import AppBar from '.';
 
 export default {
-  title: 'AppBar',
+  title: 'Common/AppBar',
   component: AppBar,
 } as ComponentMeta<typeof AppBar>;
 

@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import BannerWidget from '.';
 
 export default {
-  title: 'BannerWidget',
+  title: 'Misc/BannerWidget',
   component: BannerWidget,
 } as ComponentMeta<typeof BannerWidget>;
 

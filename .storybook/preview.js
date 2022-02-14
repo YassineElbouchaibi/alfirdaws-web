@@ -4,6 +4,7 @@ import React from 'react';
 import { CacheProvider } from '@emotion/react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { setConfig } from 'next/config';
+import * as NextImage from 'next/image';
 
 import lightTheme from '../styles/theme/lightTheme';
 import createEmotionCache from '../utility/createEmotionCache';
@@ -33,3 +34,18 @@ export const parameters = {
     },
   },
 };
+
+const OriginalNextImage = NextImage.default;
+
+// eslint-disable-next-line no-import-assign
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  value: (/** @type {import('next/image').ImageProps} */ props) => {
+    if (typeof props.src === 'string') {
+      return <OriginalNextImage {...props} unoptimized blurDataURL={props.src} />;
+    } else {
+      // don't need blurDataURL here since it is already defined on the StaticImport type
+      return <OriginalNextImage {...props} unoptimized />;
+    }
+  },
+});

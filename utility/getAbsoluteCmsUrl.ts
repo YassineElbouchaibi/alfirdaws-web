@@ -5,7 +5,11 @@ const {
 } = getConfig();
 
 const getAbsoluteCmsUrl = (path: string) => {
-  return `${cmsUri}${path}`;
+  if (path.startsWith('/')) {
+    return `${cmsUri}${path}`;
+  }
+
+  return path;
 };
 
 export default getAbsoluteCmsUrl;

@@ -1,6 +1,8 @@
 import { Grid, Typography } from '@mui/material';
 
-const Footer = () => {
+interface Props {}
+
+const Footer = ({}: Props) => {
   return (
     <footer>
       <Grid container direction={'row'} py={2} px={4} sx={{ backgroundColor: 'secondary.main' }}>
