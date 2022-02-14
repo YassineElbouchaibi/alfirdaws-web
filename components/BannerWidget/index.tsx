@@ -15,7 +15,7 @@ const BannerWidget = ({ bannerImageUrl }: Props) => {
       alignItems={'center'}
       sx={{
         height: '75vh',
-        backgroundImage: `url(${getAbsoluteCmsUrl(bannerImageUrl)})`,
+        backgroundImage: `url(${bannerImageUrl.startsWith('/') ? getAbsoluteCmsUrl(bannerImageUrl) : bannerImageUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 37%',
         width: '100%',
