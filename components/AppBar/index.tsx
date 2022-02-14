@@ -7,7 +7,9 @@ import { capitalize } from '../../utility/capitalize';
 
 const pages = ['home', 'about us'];
 
-const ResponsiveAppBar = () => {
+interface Props {}
+
+const ResponsiveAppBar = ({}: Props) => {
   const router = useRouter();
   const [anchorElNav, setAnchorElNav] = useState<HTMLButtonElement | null>(null);
 
