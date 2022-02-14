@@ -2,14 +2,17 @@
   "name": "alfirdaws-web",
   "private": true,
   "scripts": {
-    "apollo:generate": "yarn apollo codegen:generate --target=typescript --tagName=gql --includes='operations/**/types.ts' --endpoint=http://localhost:1338/graphql --header='apollocodegen: true'",
+    "apollo:generate": "yarn apollo codegen:generate --target=typescript --tagName=gql --includes='operations/**/types.ts' --endpoint=http://localhost:1338/graphql --header='apollocodegen: true' --globalTypesFile=types/globalTypes.ts",
     "develop": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "format:eslint": "yarn eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "format:prettier": "yarn prettier --write",
+    "format": "yarn format:eslint && yarn format:prettier ."
   },
   "dependencies": {
     "@apollo/client": "^3.5.8",

@@ -3,7 +3,7 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
-import { PaginationArg } from './../../../../__generated__/globalTypes';
+import { PaginationArg } from './../../../../types/globalTypes';
 
 // ====================================================
 // GraphQL query operation: GetHomePageDataQuery
