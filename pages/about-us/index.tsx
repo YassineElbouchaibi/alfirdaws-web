@@ -2,8 +2,8 @@ import { Box, Divider, Grid, Paper, Skeleton, Stack, Typography, useTheme } from
 import type { NextPage } from 'next';
 
 import { GET_ABOUT_US_PAGE_DATA_QUERY, GetAboutUsPageDataQuery } from '../../operations/queries/AboutUsPageData';
-import client from '../../utility/apollo-client';
-import getAbsoluteCmsUrl from '../../utility/getAbsoluteCmsUrl';
+import client from '../../utils/apollo-client';
+import getAbsoluteCmsUrl from '../../utils/getAbsoluteCmsUrl';
 
 interface Props {
   bannerImageUrl: string;

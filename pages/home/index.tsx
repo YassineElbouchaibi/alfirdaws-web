@@ -4,7 +4,7 @@ import type { NextPage } from 'next';
 import BannerWidget from '../../components/BannerWidget';
 import NewsWidget from '../../components/NewsWidget';
 import { GET_HOME_PAGE_DATA_QUERY, GetHomePageDataQuery } from '../../operations/queries/HomePageData';
-import client from '../../utility/apollo-client';
+import client from '../../utils/apollo-client';
 
 interface Props {
   bannerImageUrl: string;

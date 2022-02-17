@@ -8,7 +8,7 @@ import React from 'react';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 import lightTheme from '../styles/theme/lightTheme';
-import createEmotionCache from '../utility/createEmotionCache';
+import createEmotionCache from '../utils/createEmotionCache';
 
 const clientSideEmotionCache = createEmotionCache();
 

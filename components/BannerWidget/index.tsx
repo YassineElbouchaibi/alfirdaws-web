@@ -1,6 +1,6 @@
 import { Button, Grid, Stack, Typography } from '@mui/material';
 
-import getAbsoluteCmsUrl from '../../utility/getAbsoluteCmsUrl';
+import getAbsoluteCmsUrl from '../../utils/getAbsoluteCmsUrl';
 
 interface Props {
   bannerImageUrl: string;

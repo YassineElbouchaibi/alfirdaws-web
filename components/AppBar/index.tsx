@@ -3,7 +3,7 @@ import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Ty
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-import { capitalize } from '../../utility/capitalize';
+import { capitalize } from '../../utils/capitalize';
 
 const pages = ['home', 'about us'];
 
