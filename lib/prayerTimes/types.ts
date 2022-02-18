@@ -25,21 +25,23 @@ export interface PrayerTime {
   Maghrib: string;
   Isha: string;
   Jumua: string;
-  Jumua2: string;
   toggleJumua: boolean;
-  Jumua3: string;
+  Jumua2: string;
   toggleJumua2: boolean;
-  Jumua4: string;
+  Jumua3: string;
   toggleJumua3: boolean;
-  Jumua5: string;
+  Jumua4: string;
   toggleJumua4: boolean;
-  Jumua6: string;
+  Jumua5: string;
   toggleJumua5: boolean;
-  Jumua7: string;
+  Jumua6: string;
   toggleJumua6: boolean;
-  Jumua8: string;
+  Jumua7: string;
   toggleJumua7: boolean;
+  Jumua8: string;
+  toggleJumua8: boolean;
   date: Date;
+  [Jumua: string]: string | boolean | Date;
 }
 
 export interface Weekday {
@@ -204,13 +206,23 @@ export interface IqamaTime {
   Maghrib: string;
   Isha: string;
   Jumua: string;
-  Jumua2: string;
   toggleJumua: boolean;
-  Jumua3: string;
+  Jumua2: string;
   toggleJumua2: boolean;
-  Jumua4: string;
+  Jumua3: string;
   toggleJumua3: boolean;
+  Jumua4: string;
+  toggleJumua4: boolean;
+  Jumua5: string;
+  toggleJumua5: boolean;
+  Jumua6: string;
+  toggleJumua6: boolean;
+  Jumua7: string;
+  toggleJumua7: boolean;
+  Jumua8: string;
+  toggleJumua8: boolean;
   date: Date;
+  [Jumua: string]: string | boolean | Date;
 }
 
 export interface TomorrowIqamaTime {

@@ -7,7 +7,7 @@ import { setConfig } from 'next/config';
 import * as NextImage from 'next/image';
 
 import lightTheme from '../styles/theme/lightTheme';
-import createEmotionCache from '../utility/createEmotionCache';
+import createEmotionCache from '../utils/createEmotionCache';
 import { publicRuntimeConfig } from '../next.config';
 
 const clientSideEmotionCache = createEmotionCache();
