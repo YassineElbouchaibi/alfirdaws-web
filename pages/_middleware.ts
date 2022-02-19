@@ -5,7 +5,9 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { pathname } = req.nextUrl;
 
   if (pathname == '/') {
-    return NextResponse.redirect('/home');
+    const url = req.nextUrl.clone();
+    url.pathname = '/home';
+    return NextResponse.rewrite(url);
   }
 
   return NextResponse.next();
