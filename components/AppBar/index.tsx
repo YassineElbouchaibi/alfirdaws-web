@@ -102,7 +102,13 @@ const ResponsiveAppBar = ({}: Props) => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={() => setAnchorElNav(null)}>
+                <MenuItem
+                  key={page}
+                  onClick={() => {
+                    router.push(`/${page.replace(/\s/g, '-')}`);
+                    setAnchorElNav(null);
+                  }}
+                >
                   <Typography textAlign="center" sx={{ color: 'primary.main' }}>
                     {capitalize(page)}
                   </Typography>
