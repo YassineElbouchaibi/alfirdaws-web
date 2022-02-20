@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 import { GET_ABOUT_US_PAGE_DATA_QUERY, GetAboutUsPageDataQuery } from '../../operations/queries/AboutUsPageData';
 import client from '../../utils/apollo-client';
-import getAbsoluteCmsUrl from '../../utils/getAbsoluteCmsUrl';
+import getAbsolutePublicCmsUrl from '../../utils/getAbsolutePublicCmsUrl';
 
 interface Props {
   bannerImageUrl: string;
@@ -16,7 +16,7 @@ const AboutUs: NextPage<Props> = ({ bannerImageUrl }) => {
       <Box
         sx={{
           paddingY: 4,
-          backgroundImage: `url(${getAbsoluteCmsUrl(bannerImageUrl)})`,
+          backgroundImage: `url(${getAbsolutePublicCmsUrl(bannerImageUrl)})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           width: '100%',

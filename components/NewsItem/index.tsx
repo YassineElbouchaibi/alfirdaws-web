@@ -1,7 +1,7 @@
 import { Grid, Stack, Typography, useTheme } from '@mui/material';
 import Image from 'next/image';
 
-import getAbsoluteCmsUrl from '../../utils/getAbsoluteCmsUrl';
+import getAbsolutePublicCmsUrl from '../../utils/getAbsolutePublicCmsUrl';
 
 interface Props {
   title: string;
@@ -35,7 +35,7 @@ const NewsItem = ({ title, description, imageUrl, publishedAt }: Props) => {
       {imageUrl && (
         <Grid item xs={1.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Image
-            src={getAbsoluteCmsUrl(imageUrl)}
+            src={getAbsolutePublicCmsUrl(imageUrl)}
             alt="News"
             width={theme.spacing(200).replace('px', '')}
             height={theme.spacing(200).replace('px', '')}

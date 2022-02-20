@@ -1,6 +1,6 @@
 import { Button, Grid, Stack, Typography } from '@mui/material';
 
-import getAbsoluteCmsUrl from '../../utils/getAbsoluteCmsUrl';
+import getAbsolutePublicCmsUrl from '../../utils/getAbsolutePublicCmsUrl';
 
 interface Props {
   bannerImageUrl: string;
@@ -15,7 +15,7 @@ const BannerWidget = ({ bannerImageUrl }: Props) => {
       alignItems={'center'}
       sx={{
         height: '75vh',
-        backgroundImage: `url(${getAbsoluteCmsUrl(bannerImageUrl)})`,
+        backgroundImage: `url(${getAbsolutePublicCmsUrl(bannerImageUrl)})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 37%',
         width: '100%',

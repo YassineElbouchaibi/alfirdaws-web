@@ -1,5 +1,6 @@
 // -------- Strapi configuration --------
 const cmsUri = process.env.CMS_URI ?? 'http://localhost:1338';
+const publicCmsUri = process.env.PUBLIC_CMS_URI ?? 'http://localhost:1338';
 // --------------------------------------
 
 // -------- Moonode configuration --------
@@ -18,6 +19,7 @@ const nextConfig = {
   },
   publicRuntimeConfig: {
     cmsUri: cmsUri,
+    publicCmsUri: publicCmsUri,
     moonodePrayerTimeUri: `${moonodeApiUri}/${moonodeMasjidKey}`,
   },
 };
