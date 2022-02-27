@@ -1,7 +1,7 @@
 {
   "name": "alfirdaws-web",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "apollo:generate": "yarn apollo codegen:generate --target=typescript --tagName=gql --includes='operations/**/types.ts' --endpoint=http://localhost:1338/graphql --header='apollocodegen: true' --globalTypesFile=types/globalTypes.ts",
     "develop": "next dev",
