@@ -15,7 +15,7 @@ const moonodeMasjidKey = process.env.MOONODE_MASJID_KEY ?? '5142341340';
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['source.unsplash.com', 'localhost', 'alfirdaws.dev.yelbouchaibi.com'],
+    domains: ['source.unsplash.com', 'localhost', 'alfirdaws-cms.dev.yelbouchaibi.com'],
   },
   publicRuntimeConfig: {
     cmsUri: cmsUri,
