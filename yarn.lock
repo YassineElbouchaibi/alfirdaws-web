@@ -1133,17 +1133,10 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.8", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
-  version "7.17.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
-  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.13.10", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.7":
-  version "7.17.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.0.tgz#b8d142fc0f7664fb3d9b5833fd40dcbab89276c0"
-  integrity sha512-etcO/ohMNaNA2UBdaXBBSX/3aEzFMRrVfaPv8Ptc0k+cWpWW0QFiGZ2XnVqQZI1Cf734LbPGmqBKWESfW4x/dQ==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.8", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.17.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+  version "7.17.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
+  integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1605,12 +1598,12 @@
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
-"@mui/icons-material@^5.3.1":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.3.1.tgz#e0e0aecce5a86971dbaa46441d931a9c749a1c53"
-  integrity sha512-8zBWCaE8DHjIGZhGgMod92p6Rm38EhXrS+cZtaV0+jOTMeWh7z+mvswXzb/rVKc0ZYqw6mQYBcn2uEs2yclI9w==
+"@mui/icons-material@^5.6.1":
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.6.1.tgz#421e2b73992349abb07f8f03074d7e56e20bf7ba"
+  integrity sha512-I1x8u+FRLOmoJpRJASMx9UG+jZrSkNLyRQmBXivQQwXu3m3iasMoaKYhhI0J18t8+FWktbkNTp63oEUHE9Gw0Q==
   dependencies:
-    "@babel/runtime" "^7.16.7"
+    "@babel/runtime" "^7.17.2"
 
 "@mui/material@^5.3.1":
   version "5.4.0"
